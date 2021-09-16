@@ -15,9 +15,9 @@ environment:
   scmOwner: dagebei
   scmRepositoryName: hello-world-java
   scmBranchName: main
-#  githubApiUrl: https://github.com/dagebei/hello-world-java/
-#  githubUsername: dagebei
-#  githubToken: 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
+  githubApiUrl: https://api.github.com
+  githubUsername: dagebei
+  githubToken: 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
   enableJira: true
   jiraProjectName: IODEMO
   jiraIssuesQuery: project=IODEMO
