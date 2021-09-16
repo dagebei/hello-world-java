@@ -15,7 +15,7 @@ environment:
   scmOwner: dagebei
   scmRepositoryName: dagebei/hello-world-java
   scmBranchName: main
-  githubApiUrl: "https://api.github.com/repos"
+  githubApiUrl: https://api.github.com/repos
   githubUsername: <<GITHUB_USERNAME>>
   githubToken: <<GITHUB_TOKEN>>
   enableJira: true
