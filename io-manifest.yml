@@ -1,0 +1,70 @@
+template: high-risk 
+
+application:
+  appName: hello-world-java
+  projectLanguage: Java
+  platformVersion: Java 11
+  buildSystem: Maven
+  riskMatrixRevision: default
+  sourceFilePattern: .*\+\+\+.*(\.java|\.jsp)+.*
+  sensitivePackagePattern: (?s).*((/[a-z]+)*)/com/service/([A-Za-z]*).java(?s).*
+  fileChangeThreshold: 10
+
+environment:
+  scm: github
+  scmOwner: dagebei
+  scmRepositoryName: hello-world-java
+  scmBranchName: main
+  githubApiUrl: https://github.com/dagebei/hello-world-java/
+  githubUsername: dagebei
+  githubToken: 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
+  enableJira: true
+  jiraProjectName: IODEMO
+  jiraIssuesQuery: project=IODEMO
+  testDeploymentRoot: /
+
+security:
+  pipeline:
+    type: "Inline"
+    toolchain: "Synopsys"
+
+connectors:
+  - connector_name: jira
+    fields:
+      issuetype: Bug
+      projectkey: IODEMO
+
+codedx:
+  instance_url: https://poc09.codedx.synopsys.com
+  api_key: c4c694c5-a174-4a53-8c51-34cc91dc16a5
+  project_id: hello-world-java
+
+# buildbreaker:
+#  - activityname: sast
+#    status:
+#      - new
+#      - open
+#    overallseverity:
+#      - critical
+#      - high
+#  - activityname: sca
+#    status:
+#      - new
+#      - open
+#    overallseverity:
+#      - critical
+#      - high
+#  - activityname: codedx
+#    min_risk_score: <<CODEDX_MIN_RISK_SCORE>> # 0-100
+#
+# for WF client
+
+tool_information:
+  - tool_name: polaris
+    enabled: true
+    fields:
+      project_name: dagebei/hello-world-java
+  - tool_name: blackduck
+    enabled: true
+    fields:
+      project_name: hello-world-java
