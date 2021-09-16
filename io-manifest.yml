@@ -17,7 +17,6 @@ environment:
   scmBranchName: main
   githubApiUrl: https://api.github.com/repos/
   githubUsername: dagebei
-  githubToken: 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
   enableJira: true
   jiraProjectName: IODEMO
   jiraIssuesQuery: project=IODEMO
