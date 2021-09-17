@@ -37,7 +37,7 @@ connectors:
 codedx:
   instance_url: https://poc09.codedx.synopsys.com
   api_key: <<CODEDX_API_KEY>>
-  project_id: hello-world-java
+  project_id: 2
 
 # buildbreaker:
 #  - activityname: sast
