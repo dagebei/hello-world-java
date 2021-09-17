@@ -24,14 +24,9 @@ environment:
   testDeploymentRoot: /
 
 security:
-#  pipeline:
-#    type: "Inline"
-#    toolchain: "Synopsys"
-  activities:
-    sast:
-      rescanThreshold: 10
-    sca:
-      rescanThreshold: 10
+  pipeline:
+    type: "Inline"
+    toolchain: "Synopsys"
 
 #connectors:
 #  - connector_name: jira
@@ -44,7 +39,9 @@ codedx:
   api_key: <<CODEDX_API_KEY>>
   project_id: 2
 
-#buildbreaker:
+buildbreaker:
+- activityname: codedx
+  min_risk_score: 50
 #  - activityname: sast
 #    status:
 #      - new
@@ -59,8 +56,6 @@ codedx:
 #    overallseverity:
 #      - critical
 #      - high
-#  - activityname: codedx
-#    min_risk_score: 50
 
 # for WF client
 tool_information:
