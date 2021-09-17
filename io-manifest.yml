@@ -28,35 +28,35 @@ security:
     type: "Inline"
     toolchain: "Synopsys"
 
-connectors:
-  - connector_name: jira
-    fields:
-      issuetype: Bug
-      projectkey: IODEMO
+#connectors:
+#  - connector_name: jira
+#    fields:
+#      issuetype: Bug
+#      projectkey: IODEMO
 
 codedx:
   instance_url: https://poc09.codedx.synopsys.com/codedx
   api_key: <<CODEDX_API_KEY>>
   project_id: 2
 
-# buildbreaker:
-#  - activityname: sast
-#    status:
-#      - new
-#      - open
-#    overallseverity:
-#      - critical
-#      - high
-#  - activityname: sca
-#    status:
-#      - new
-#      - open
-#    overallseverity:
-#      - critical
-#      - high
-#  - activityname: codedx
-#    min_risk_score: <<CODEDX_MIN_RISK_SCORE>> # 0-100
-#
+ buildbreaker:
+  - activityname: sast
+    status:
+      - new
+      - open
+    overallseverity:
+      - critical
+      - high
+  - activityname: sca
+    status:
+      - new
+      - open
+    overallseverity:
+      - critical
+      - high
+  - activityname: codedx
+    min_risk_score: <<CODEDX_MIN_RISK_SCORE>> # 0-100
+
 # for WF client
 
 tool_information:
