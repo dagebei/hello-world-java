@@ -55,7 +55,7 @@ codedx:
       - critical
       - high
   - activityname: codedx
-    min_risk_score: <<CODEDX_MIN_RISK_SCORE>> # 0-100
+    min_risk_score: 50
 
 # for WF client
 
