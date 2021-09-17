@@ -24,9 +24,14 @@ environment:
   testDeploymentRoot: /
 
 security:
-  pipeline:
-    type: "Inline"
-    toolchain: "Synopsys"
+#  pipeline:
+#    type: "Inline"
+#    toolchain: "Synopsys"
+  activities:
+    sast:
+      rescanThreshold: 10
+    sca:
+      rescanThreshold: 10
 
 #connectors:
 #  - connector_name: jira
