@@ -39,26 +39,25 @@ codedx:
   api_key: <<CODEDX_API_KEY>>
   project_id: 2
 
- buildbreaker:
-  - activityname: sast
-    status:
-      - new
-      - open
-    overallseverity:
-      - critical
-      - high
-  - activityname: sca
-    status:
-      - new
-      - open
-    overallseverity:
-      - critical
-      - high
-  - activityname: codedx
-    min_risk_score: 50
+#buildbreaker:
+#  - activityname: sast
+#    status:
+#      - new
+#      - open
+#    overallseverity:
+#      - critical
+#      - high
+#  - activityname: sca
+#    status:
+#      - new
+#      - open
+#    overallseverity:
+#      - critical
+#      - high
+#  - activityname: codedx
+#    min_risk_score: 50
 
 # for WF client
-
 tool_information:
   - tool_name: polaris
     enabled: true
