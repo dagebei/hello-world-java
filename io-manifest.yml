@@ -41,7 +41,7 @@ codedx:
 
 buildbreaker:
 - activityname: codedx
-  min_risk_score: 50
+  min_risk_score: 100
 #  - activityname: sast
 #    status:
 #      - new
