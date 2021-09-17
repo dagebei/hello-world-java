@@ -40,22 +40,22 @@ codedx:
   project_id: 2
 
 buildbreaker:
-- activityname: codedx
-  min_risk_score: 100
-#  - activityname: sast
-#    status:
-#      - new
-#      - open
-#    overallseverity:
-#      - critical
-#      - high
-#  - activityname: sca
-#    status:
-#      - new
-#      - open
-#    overallseverity:
-#      - critical
-#      - high
+#- activityname: codedx
+#  min_risk_score: 100
+#- activityname: sast
+#  status:
+#  - new
+#  - open
+#  overallseverity:
+#  - critical
+#  - high
+- activityname: sca
+  status:
+  - new
+  - open
+  overallseverity:
+  - critical
+  - high
 
 # for WF client
 tool_information:
