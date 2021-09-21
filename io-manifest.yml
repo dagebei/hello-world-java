@@ -56,7 +56,7 @@ codedx:
 #  overallseverity:
 #  - critical
 #  - high
-
+#
 # for WF client
 tool_information:
 - tool_name: polaris
