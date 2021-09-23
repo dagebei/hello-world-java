@@ -35,7 +35,7 @@ security:
 #      projectkey: IODEMO
 
 codedx:
-  instance_url: http://localhost/codedx
+  instance_url: http://localhost:18080/codedx
   api_key: <<CODEDX_API_KEY>>
   project_id: 2
 
