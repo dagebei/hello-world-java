@@ -62,7 +62,7 @@ tool_information:
 - tool_name: polaris
   enabled: true
   fields:
-    project_name: dagebei/hello-world-java
+    project_name: hello-world-java
 - tool_name: blackduck
   enabled: true
   fields:
